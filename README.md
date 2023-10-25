@@ -48,5 +48,7 @@ You now have a deployed app
     i. Cloud Run
     ii. Service Accounts
 
+8. Added these lines for testing the pipeline
+
 
 
