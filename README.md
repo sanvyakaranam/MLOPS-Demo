@@ -30,7 +30,6 @@ python app.py
 ```
 The flask app will run on http://0.0.0.0:8080/ (localhost)
 
-
 ### Deploying on Google Cloud
 3. Create a Google Cloud Run trigger at: https://console.cloud.google.com/cloud-build/triggers
 
@@ -42,6 +41,12 @@ You now have a deployed app
 
 5. Delete the triggers on the page https://console.cloud.google.com/cloud-build/triggers
 6. Delete the app at:  https://console.cloud.google.com/run
+
+## Pre-requisites
+
+7. go to Cloudbuild settings and enable following
+    i. Cloud Run
+    ii. Service Accounts
 
 
 
