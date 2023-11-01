@@ -56,5 +56,7 @@ You now have a deployed app
 
 11. Added a line for testing the container 
 
+12. Added a line for testing the container
+
 
 
