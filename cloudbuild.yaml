@@ -21,6 +21,16 @@ steps:
     args:
       - 'push'
       - 'gcr.io/$PROJECT_ID/appcicd'
+
+  # step 4: Deploy container image to docker container
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'run'
+      - '-d'
+      - '-p'
+      - '8080:8080'
+      - 'gcr.io/$PROJECT_ID/appcicd:latest'
+
   # Step 4: Deploy container image to Cloud Run
   # - name: 'gcr.io/cloud-builders/gcloud'
   #   args:
@@ -34,12 +44,3 @@ steps:
   #     - '--platform'
   #     - 'managed'
   #     - '--allow-unauthenticated'
-
-  # step 4: Deploy container image to docker container
-  - name: 'gcr.io/cloud-builders/docker'
-    args:
-      - 'run'
-      - '-d'
-      - '-p'
-      - '8080:8080'
-      - 'gcr.io/$PROJECT_ID/appcicd:latest'
